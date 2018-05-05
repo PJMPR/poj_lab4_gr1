@@ -4,11 +4,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ICanBeAHero mage = new Mage();
+		Hero mage = new Mage();
 		mage.setName("Gandalf");
-		ICanBeAHero knight = new Knight();
+		Hero knight = new Knight();
 		knight.setName("Aragorn");
-		ICanBeAHero archer = new Archer();
+		Hero archer = new Archer();
 		archer.setName("Legolas");
 		
 		for(int i=0;i<100;i++){
@@ -46,7 +46,7 @@ public class Main {
 		
 	}
 
-	static void printoutHero(ICanBeAHero hero){
+	static void printoutHero(Hero hero){
 		System.out.println("--------------------------------------------------------");
 		System.out.println(hero.getName()+"\t|"
 				+ "str: "+hero.getStrength() +"\t|"
