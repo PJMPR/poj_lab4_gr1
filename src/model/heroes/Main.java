@@ -4,12 +4,50 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		ICanBeAHero mage = new Mage();
+		mage.setName("Gandalf");
+		ICanBeAHero knight = new Knight();
+		knight.setName("Aragorn");
+		ICanBeAHero archer = new Archer();
+		archer.setName("Legolas");
 		
+		for(int i=0;i<100;i++){
+			mage.levelUp();
+			mage.raiseAgi();
+			mage.raiseDef();
+			mage.raiseDex();
+			mage.raiseInt();
+			mage.raiseSpd();
+			mage.raiseStr();
+			
 
+			knight.levelUp();
+			knight.raiseAgi();
+			knight.raiseDef();
+			knight.raiseDex();
+			knight.raiseInt();
+			knight.raiseSpd();
+			knight.raiseStr();
+			
+
+			archer.levelUp();
+			archer.raiseAgi();
+			archer.raiseDef();
+			archer.raiseDex();
+			archer.raiseInt();
+			archer.raiseSpd();
+			archer.raiseStr();
+			
+		}
+
+		printoutHero(mage);
+		printoutHero(knight);
+		printoutHero(archer);
+		
 	}
-	
-	static void printoutHero(Mage hero){
-		System.out.println("----------------------------");
+
+	static void printoutHero(ICanBeAHero hero){
+		System.out.println("--------------------------------------------------------");
 		System.out.println(hero.getName()+"\t|"
 				+ "str: "+hero.getStrength() +"\t|"
 				+ "def: "+hero.getDefence() +"\t|"
@@ -17,7 +55,7 @@ public class Main {
 				+ "int: "+hero.getIntelligence() +"\t|"
 				+ "agi: "+hero.getAgility() +"\t|"
 				+ "spd: "+hero.getSpeed() +"\t|");
-		System.out.println("----------------------------");
+		System.out.println("--------------------------------------------------------");		
 	}
 
 }
