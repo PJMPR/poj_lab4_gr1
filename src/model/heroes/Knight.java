@@ -2,49 +2,43 @@ package model.heroes;
 
 public class Knight extends Hero implements ICanBeAHero {
 
-	public void raiseStr(){
-		if(availableStatsPoints<=0)return;
+	@Override
+	protected void modifyStr() {
 		strength=(int)((strength+1)/1.2);
 		strength++;
 		strength*=1.2;
-		availableStatsPoints--;
 	}
-	public void raiseDef(){
-		if(availableStatsPoints<=0)return;
+	@Override
+	protected void modifyDef() {
 		defence=(int)((defence+1)/1.1);
 		defence++;
 		defence*=1.1;
-		availableStatsPoints--;
+		
 	}
-	
-	public void raiseInt(){
-		if(availableStatsPoints<=0)return;
+	@Override
+	protected void modifyInt() {
 		intelligence++;
-		availableStatsPoints--;
+		
 	}
-
-	public void raiseDex(){
-		if(availableStatsPoints<=0)return;
+	@Override
+	protected void modifyDex() {
 		dextrity=(int)((dextrity+1)/1.05);
 		dextrity++;
 		dextrity*=1.05;
-		availableStatsPoints--;
+		
 	}
-	
-	public void raiseAgi(){
-		if(availableStatsPoints<=0)return;
+	@Override
+	protected void modifyAgi() {
 		agility=(int)((agility+1)/1.02);
 		agility++;
 		agility*=1.02;
-		availableStatsPoints--;
+		
 	}
-	
-
-	public void raiseSpd(){
-		if(availableStatsPoints<=0)return;
+	@Override
+	protected void modifySpd() {
 		speed=(int)((speed+1)/1.05);
 		speed++;
 		speed*=1.05;
-		availableStatsPoints--;
+		
 	}
 }
